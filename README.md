@@ -59,8 +59,8 @@ It combines the power of **local LLMs**, **semantic search**, and **Streamlit UI
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/seerat-gpt.git
-cd seerat-gpt
+git clone https://github.com/NawairaSajjad/seerah-gpt.git
+cd seerah-gpt
 ```
 
 ### 2️⃣ Install dependencies
@@ -81,21 +81,8 @@ ollama pull bge-m3
 ### 4️⃣ Launch the Streamlit app
 
 ```bash
-streamlit run seerat_gpt.py
+streamlit run seerah-gpt.py
 ```
-
----
-
-
-## 📚 File Overview
-
-| File                | Description                              |
-| ------------------- | ---------------------------------------- |
-| `seerat_gpt.py`     | Main Streamlit application               |
-| `embeddings.joblib` | Pre-computed embeddings for Seerat texts |
-| `README.md`         | Project documentation                    |
-
----
 
 ## 🌙 Vision
 
