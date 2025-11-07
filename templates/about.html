@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Seerah Bot</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <div class="header-left">
+        <img src="images/arr.jpg" alt="Logo" class="chat-logo" />
+        <h1>Seerah <span class="white-text">Bot</span></h1>
+      </div>
+      <div class="header-right">
+       
+          <button class="top-btn" onclick="window.location.href='{{ url_for('chat') }}'">Back</button>
+      </div>
+    </header>
+
+    <main class="info-main">
+      <section class="info-section">
+        <h2>About Seerah Bot</h2>
+        <p>
+          <strong>Seerah Bot</strong> is an interactive web companion created to help users
+           learn about the blessed life and teachings of Prophet Muhammad ﷺ.  
+        </p>
+        <p>
+          Our goal is to make Islamic knowledge , especially the Seerah,
+           easily accessible and engaging for everyone.
+            You can ask questions about the Prophet’s (ﷺ) life, companions, 
+          and events, and the bot will respond using authentic sources and 
+          historical context.
+        </p>
+        <div class="mission-box">
+          <h3>Our Mission</h3>
+          <p>
+            To encourage learning about the Seerah of the Prophet ﷺ through modern,
+             AI-powered conversation tools — combining knowledge, technology,
+              and faith beautifully.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

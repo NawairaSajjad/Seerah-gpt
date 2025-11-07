@@ -1,0 +1,119 @@
+/* General reset and base styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header section */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b2a49;
+  color: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.white-text {
+  color: #00bcd4;
+}
+
+/* Top button */
+.top-btn {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.top-btn:hover {
+  background-color: #0097a7;
+}
+
+/* Main content */
+.info-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+}
+
+.info-section {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 16px;
+  max-width: 850px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+}
+
+/* Headings and text */
+.info-section h2 {
+  font-size: 2rem;
+  color: #1b2a49;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.info-section p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Mission box */
+.mission-box {
+  margin-top: 40px;
+  padding: 25px;
+  background: #e0f7fa;
+  border-left: 5px solid #00bcd4;
+  border-radius: 10px;
+}
+
+.mission-box h3 {
+  margin-top: 0;
+  color: #006064;
+  margin-bottom: 10px;
+}
+
+.mission-box p {
+  margin: 0;
+  color: #004d40;
+  line-height: 1.7;
+}

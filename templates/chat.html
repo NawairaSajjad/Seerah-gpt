@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seerah Bot - Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <div class="header-left">
+        <img src="{{ url_for('static', filename='static/images/arr.jpg') }}" alt="Logo" class="chat-logo" />
+        <h1>Seerah <span class="white-text">Bot</span></h1>
+      </div>
+      <div class="header-right">
+        <button class="top-btn" onclick="window.location.href='{{ url_for('about') }}'">About</button>
+        <button class="top-btn" onclick="window.location.href='{{ url_for('faq') }}'">FAQs</button>
+      </div>
+    </header>
+
+    <main class="chat-main">
+      <div class="chat-messages">
+        <div class="bot-message">
+          <p>Assalamu Alaikum <br>How can I help you explore the life of the Prophet ﷺ today?</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="chat-footer">
+      <div class="input-area">
+        <textarea id="userInput" placeholder="Ask about the Seerah..." rows="1"></textarea>
+        <button id="sendBtn">Send</button>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const sendBtn = document.getElementById("sendBtn");
+    const input = document.getElementById("userInput");
+    const chatMessages = document.querySelector(".chat-messages");
+
+    sendBtn.addEventListener("click", () => {
+      const text = input.value.trim();
+      if (text === "") return;
+
+      // Show user message
+      const userMsg = document.createElement("div");
+      userMsg.classList.add("user-message");
+      userMsg.innerHTML = `<p>${text}</p>`;
+      chatMessages.appendChild(userMsg);
+      input.value = "";
+
+      // Call Flask API
+      fetch('/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: text })
+      })
+      .then(response => response.json())
+      .then(data => {
+        const botMsg = document.createElement("div");
+        botMsg.classList.add("bot-message");
+        botMsg.innerHTML = `<p>${data.response}</p>`;
+        chatMessages.appendChild(botMsg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      })
+      .catch(err => {
+        const botMsg = document.createElement("div");
+        botMsg.classList.add("bot-message");
+        botMsg.innerHTML = `<p>Sorry, there was an error. Try again later.</p>`;
+        chatMessages.appendChild(botMsg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        console.error(err);
+      });
+    });
+  </script>
+</body>
+</html>

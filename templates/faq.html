@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs - Seerah Bot</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <div class="header-left">
+        <img src="static/images/arr.jpg" alt="Logo" class="chat-logo" />
+        <h1>Seerah <span class="white-text">Bot</span></h1>
+      </div>
+      <div class="header-right">
+
+          <button class="top-btn" onclick="window.location.href='{{ url_for('chat') }}'">Back</button>
+      </div>
+    </header>
+
+    <main class="info-main">
+      <section class="info-section">
+        <h2>Frequently Asked Questions</h2>
+        <p class="intro-text">
+          Here are some common questions people ask about <strong>Seerah Bot</strong>.
+          If you have more questions, feel free to ask directly in the chat!
+        </p>
+
+        <div class="faq-box">
+          <div class="faq-item">
+            <h3>1. What is Seerah Bot?</h3>
+            <p>
+              Seerah Bot is an interactive assistant that helps you learn about the
+              life and teachings of Prophet Muhammad ﷺ through AI-powered conversation.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>2. How does Seerah Bot provide information?</h3>
+            <p>
+              It uses authentic Islamic sources and reliable Seerah literature to
+              generate meaningful, educational responses to your questions.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>3. Can I ask Seerah Bot questions in Urdu?</h3>
+            <p>
+              Yes, Seerah Bot can understand and respond in both English and Urdu.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>4. Is the information verified?</h3>
+            <p>
+              The responses are based on well-known Islamic scholars and Seerah
+              compilations, aiming to provide authentic and respectful content.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>5. Will Seerah Bot get new updates?</h3>
+            <p>
+              Yes! The bot is continuously being improved with more sources and
+              updated answers to enhance your learning experience.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

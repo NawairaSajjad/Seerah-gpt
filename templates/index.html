@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seerah Bot</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+  <div class="splash-container">
+    <div class="logo">
+      <div class="glow-circle">
+        <img src="static/images/arr.jpg" alt="Seerah Bot Logo" />
+      </div>
+      <h1>Seerah <span>Bot</span></h1>
+      <p>Discover the Life of the Prophet ﷺ with AI</p>
+    </div>
+    <div class="loading-bar">
+      <div class="progress"></div>
+    </div>
+    <script>
+  setTimeout(() => {
+ window.location.href = "{{ url_for('chat') }}";
+; // redirects after loading
+  }, 3500); // 3.5 seconds delay
+</script>
+  </div>
+</body>
+</html>
