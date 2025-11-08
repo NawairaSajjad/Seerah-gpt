@@ -4,14 +4,20 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
+  background-color: #f2f7f2; /* light greenish base */
   color: #333;
-}
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('images/islamic-pattern-light.jpg') ; /* soft Islamic geometric  background-repeat: repeat;
 
+/* ================================
+   Chat Container
+================================== */
 .chat-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-bottom: 40px;
 }
 
 /* ================================
@@ -21,51 +27,58 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b2a49;
-  color: white;
-  padding: 15px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #0b3d2f, #1b7f3b); /* deep to rich green */
+  color: #fff;
+  padding: 20px 40px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .chat-logo {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid #ffd700; /* gold accent */
 }
 
 .chat-header h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   margin: 0;
 }
 
 .white-text {
-  color: #00bcd4;
+  color: #ffd700; /* golden highlight */
 }
 
 /* ================================
    Top Buttons
 ================================== */
 .top-btn {
-  background-color: #00bcd4;
+  background-color: #1b7f3b;
   color: white;
   border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
+  border-radius: 15px;
+  padding: 10px 22px;
   cursor: pointer;
-  font-size: 0.95rem;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .top-btn:hover {
-  background-color: #0097a7;
+  background-color: #145c29;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ================================
@@ -80,60 +93,67 @@ body {
 }
 
 .info-section {
-  background: white;
-  padding: 40px 50px;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.97);
+  padding: 50px 60px;
+  border-radius: 30px;
   max-width: 850px;
   width: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   line-height: 1.8;
+  border: 2px solid #1b7f3b;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
 }
 
 /* ================================
    FAQ Section
 ================================== */
 .info-section h2 {
-  font-size: 2rem;
-  color: #1b2a49;
+  font-size: 2.2rem;
+  color: #0b3d2f;
   margin-bottom: 25px;
-  border-bottom: 3px solid #00bcd4;
+  border-bottom: 3px solid #1b7f3b;
   display: inline-block;
   padding-bottom: 5px;
 }
 
 .intro-text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #444;
   margin-bottom: 30px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .faq-box {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .faq-item {
-  background-color: #f1f8ff;
-  border-left: 5px solid #1b2a49;
-  padding: 20px 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fefdf9;
+  border-left: 6px solid #1b2a49;
+  padding: 25px 30px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
 }
 
 .faq-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  background-color: #f2f9f4;
 }
 
 .faq-item h3 {
   margin-top: 0;
   margin-bottom: 10px;
-  color: #1b2a49;
-  font-size: 1.15rem;
+  color: #0b3d2f;
+  font-size: 1.25rem;
 }
 
 .faq-item p {
@@ -150,10 +170,11 @@ body {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    padding: 15px 20px;
   }
 
   .info-section {
-    padding: 25px 20px;
+    padding: 30px 20px;
   }
 
   .chat-header h1 {
@@ -161,11 +182,12 @@ body {
   }
 
   .top-btn {
-    padding: 6px 12px;
-    font-size: 0.9rem;
+    padding: 8px 14px;
+    font-size: 0.95rem;
   }
 
   .faq-item {
     padding: 18px;
   }
+}
 }

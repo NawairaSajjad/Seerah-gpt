@@ -3,73 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQs - Seerah Bot</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+  <title>Seerah Bot — About & FAQ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #001f3f, #003366, #001a33);
+      color: #f5f5f5;
+    }
 
+    .pattern-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/islamic.png');
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 10px auto 0;
+      color: #e0e0e0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(12px);
+      padding: 40px;
+      z-index: 1;
+      position: relative;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #dcdcdc;
+    }
+
+    .faq {
+      margin-top: 50px;
+    }
+
+    .faq-item {
+      background: rgba(255, 255, 255, 0.9);
+      color: #001f3f;
+      border-radius: 15px;
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .faq-item h3 {
+      font-size: 1.15rem;
+      cursor: pointer;
+      color: #002244;
+      margin: 0;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .faq-item h3:hover {
+      color: #0047ab;
+    }
+
+    .faq-item p {
+      margin-top: 10px;
+      display: none;
+      font-size: 0.95rem;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+      color: #b0b8c1;
+    }
+  </style>
 </head>
 <body>
-  <div class="chat-container">
-    <header class="chat-header">
-      <div class="header-left">
-        <img src="static/images/arr.jpg" alt="Logo" class="chat-logo" />
-        <h1>Seerah <span class="white-text">Bot</span></h1>
+  <div class="pattern-overlay"></div>
+  <header>
+    <h1>About Seerah Bot</h1>
+    <p>Seerah Bot is inspired by The Sealed Nectar (Ar-Raheeq Al-Makhtum), the award-winning biography of Prophet Muhammad ﷺ written by Shaykh Safiur-Rahman al-Mubarakpuri (رحمه الله). Recognized by the Muslim World League as the best Seerah work, it presents an authentic and detailed account of the Prophet’s ﷺ life, from his noble lineage to his mission and message.</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Our Mission</h2>
+      <p>Our mission is to bridge faith and technology that making Islamic knowledge, especially Seerah, accessible through modern conversational interfaces. Seerah Bot delivers authentic references, clean design, and a serene user experience to help you stay connected to prophetic teachings in the digital age.</p>
+    </section>
+
+    <section>
+      <h2>Why Seerah Bot?</h2>
+      <p>Seerah Bot combines advanced AI with timeless Islamic wisdom. Designed with care for learners, educators, and seekers of truth, it helps you explore verified narrations and stories in an interactive and respectful manner.</p>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>1. Is this bot based on authentic knowledge?</h3>
+        <p>Yes. Seerah Bot is based on authentic and verified Islamic sources, including the renowned biography “The Sealed Nectar” (Ar-Raheeq Al-Makhtum).</p>
       </div>
-      <div class="header-right">
 
-          <button class="top-btn" onclick="window.location.href='{{ url_for('chat') }}'">Back</button>
+      <div class="faq-item">
+        <h3>2. What is “The Sealed Nectar”?</h3>
+        <p>It is an award-winning biography of the Prophet Muhammad ﷺ that presents an authentic and comprehensive account of his blessed life.</p>
       </div>
-    </header>
 
-    <main class="info-main">
-      <section class="info-section">
-        <h2>Frequently Asked Questions</h2>
-        <p class="intro-text">
-          Here are some common questions people ask about <strong>Seerah Bot</strong>.
-          If you have more questions, feel free to ask directly in the chat!
-        </p>
+      <div class="faq-item">
+        <h3>3. Who is the writer of “The Sealed Nectar”?</h3>
+        <p>The book was written by Sheikh Safiur Rahman al-Mubarakpuri (رحمه الله), a renowned Islamic scholar from India.</p>
+      </div>
 
-        <div class="faq-box">
-          <div class="faq-item">
-            <h3>1. What is Seerah Bot?</h3>
-            <p>
-              Seerah Bot is an interactive assistant that helps you learn about the
-              life and teachings of Prophet Muhammad ﷺ through AI-powered conversation.
-            </p>
-          </div>
+      <div class="faq-item">
+        <h3>4. What makes this book special?</h3>
+        <p>“The Sealed Nectar” won first prize in a global competition organized by the Muslim World League in 1979 for the best biography of Prophet Muhammad ﷺ.</p>
+      </div>
 
-          <div class="faq-item">
-            <h3>2. How does Seerah Bot provide information?</h3>
-            <p>
-              It uses authentic Islamic sources and reliable Seerah literature to
-              generate meaningful, educational responses to your questions.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>3. Can I ask Seerah Bot questions in Urdu?</h3>
-            <p>
-              Yes, Seerah Bot can understand and respond in both English and Urdu.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>4. Is the information verified?</h3>
-            <p>
-              The responses are based on well-known Islamic scholars and Seerah
-              compilations, aiming to provide authentic and respectful content.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>5. Will Seerah Bot get new updates?</h3>
-            <p>
-              Yes! The bot is continuously being improved with more sources and
-              updated answers to enhance your learning experience.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+      <div class="faq-item">
+        <h3>5. How can I trust the information shared by Seerah Bot?</h3>
+        <p>All responses are verified against reliable Seerah sources like “The Sealed Nectar” and other authentic Islamic references before being shared.</p>
+      </div>
+    </section>
   </div>
+
+  <footer>
+    © 2025 Seerah Bot | Crafted with faith & technology ✨
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-item h3').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
